@@ -11,8 +11,6 @@ class passanger{
     }
     std::string& operator[](int i);
     
-        
-
     std::string& getName(){
         return name;
     }
@@ -143,6 +141,8 @@ int main()
 
 
 
+
+    
 
 
 
