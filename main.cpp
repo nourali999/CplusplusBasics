@@ -2,24 +2,40 @@
 #include <iostream> 
 #include <ostream>
 #include <vector>
+#include <sstream>
+#include <string>
 
 class passanger{
     public:
-    passanger(int number, std::string name){
-        this->name = name;
-        this->number = number;
+    passanger(int num, std::string nm, std::string lm){
+        this->name = nm;
+        this->number = num;
+        this->lastname = lm;
     }
     std::string& operator[](int i);
     
     std::string& getName(){
         return name;
     }
+    std::string& getLastName(){
+        return lastname;
+    }
     int getNumber(){
         return number;
     }
+    void changeName(std::string& nm){
+        this->name =nm;
+    }
+
+    std::string& getNumberString(){
+        num1 = std::to_string(number);
+        return num1;
+    }
     private:
     int number;
+    std::string lastname;
     std::string name;
+    std::string num1;
     friend bool operator==(passanger& x, passanger& y);
     friend std::ostream& operator<<(std::ostream& out, passanger& pass);
 
@@ -30,8 +46,12 @@ class passanger{
             return this->name;
          }
          if(i==1){
-             return this->getName();
+             return this->getLastName();
          }
+         if(i==2){
+             return this->getNumberString();
+         }
+
     }
 
 
@@ -52,7 +72,7 @@ bool operator==(passanger& x, passanger& y){
 void loadPassanger() {
  std::vector<passanger*> bus(3);
  for(int i=0; i<bus.size(); i++){
-     bus[i] = new passanger(55,"uchiha");
+     bus[i] = new passanger(55,"uchiha","unicorn");
      std::cout << bus[i]->getName() <<std::endl;
      delete bus[i];
    }  
@@ -135,14 +155,23 @@ int main()
     // std::cout << getMin<int>(5,6) << std::endl;
     // std::cout << getMax<int>(5,6) << std::endl;
 
-    passanger p(5,"noah");
+    passanger p(5,"noah","unicorn");
+    // std::cout<< p[0] << std::endl;
+    // std::cout<< p[1] << std::endl;
+    // std::cout<< p[2] <<std::endl;
 
-    std::cout<< p[1] << std::endl;
+    std::cout << p.getName() << std::endl;
+    std::string zaid = "zaid";
+    p.changeName(zaid);
+
+    std::cout << p.getName() << std::endl;
 
 
 
 
-    
+
+
+
 
 
 
