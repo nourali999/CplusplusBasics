@@ -86,10 +86,10 @@ class person {
        virtual ~person(){
 
         }
-        person(const std::string& nm, const std::string& id){
-           this->name = nm;
-           this->IdNum = id;
-        }
+        person(const std::string& nm, const std::string& id)
+           : name(nm), IdNum(id) {}
+          
+        
         virtual void print();
         std::string getname();
 
@@ -173,6 +173,7 @@ private:
 // Driver Code 
 int main() 
 { 
+    
     //loadPassanger();
     // person *pp[2];
     // pp[0] = new person("noah","558833");
@@ -197,17 +198,22 @@ int main()
     // std::cout << p.getName() << std::endl;
 
     //student *s1 =new student("zaid","224455","cs",2020);
-   // s1->print();
+    // s1->print();
     //delete s1;
 
 
-    basicVector<int> basic;
+    // basicVector<int> basic;
    
-    basic[0] = 5;
-    basic = 5;
-    std::cout<< basic[0] << std::endl;
-    basic[0] = 10;
-    std::cout<< basic[0] << std::endl;
+    // basic[0] = 5;
+    // basic = 5;
+    // std::cout<< basic[0] << std::endl;
+    // basic[0] = 10;
+    // std::cout<< basic[0] << std::endl;
+
+    person p("novah", "55");
+
+    std::cout << p.getname() <<std::endl;
+
 
 
 
