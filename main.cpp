@@ -4,6 +4,7 @@
 #include <vector>
 #include <sstream>
 #include <string>
+#include <stdlib.h>
 
 class passanger{
     public:
@@ -52,7 +53,7 @@ class passanger{
              return this->getNumberString();
          }
 
-    }
+   }
 
 
 
@@ -137,6 +138,35 @@ E getMax(E a, E b){
 }
 
 
+template <typename T>
+class basicVector{
+
+public:
+        basicVector(){
+
+        }
+        T& operator[](int i){
+            if(i>=vec.size()){
+                std::cout << " vector out of bounds" << std::endl;
+            }
+            return vec[i];
+        }
+        basicVector& operator=(T value){ 
+             vec.push_back(value);
+             return *this; 
+        }
+
+
+private:
+        std::vector<T> vec;
+
+};
+
+
+
+
+
+
 
 
 
@@ -155,32 +185,33 @@ int main()
     // std::cout << getMin<int>(5,6) << std::endl;
     // std::cout << getMax<int>(5,6) << std::endl;
 
-    passanger p(5,"noah","unicorn");
+    // passanger p(5,"noah","unicorn");
     // std::cout<< p[0] << std::endl;
     // std::cout<< p[1] << std::endl;
     // std::cout<< p[2] <<std::endl;
 
-    std::cout << p.getName() << std::endl;
-    std::string zaid = "zaid";
-    p.changeName(zaid);
+    // std::cout << p.getName() << std::endl;
+    // std::string zaid = "zaid";
+    // p.changeName(zaid);
 
-    std::cout << p.getName() << std::endl;
-
-
-
-
-
-
-
-
-
-
-
-
+    // std::cout << p.getName() << std::endl;
 
     //student *s1 =new student("zaid","224455","cs",2020);
    // s1->print();
     //delete s1;
+
+
+    basicVector<int> basic;
+   
+    basic[0] = 5;
+    basic = 5;
+    std::cout<< basic[0] << std::endl;
+    basic[0] = 10;
+    std::cout<< basic[0] << std::endl;
+
+
+
+
     return 0;
 
 } 
