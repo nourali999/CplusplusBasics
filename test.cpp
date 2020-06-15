@@ -14,4 +14,5 @@ int main(){
     *p = 'X'; 
     std::cout << ch << std::endl;
 	return 0;
+	
 }

@@ -30,7 +30,6 @@ int main(){
 
 	n = gm.returnClass();
 
-
 	cout<< n.getScore() <<"  "<< n.getName() << endl;
 
 
