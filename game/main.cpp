@@ -1,4 +1,5 @@
 #include "game.h"
+#include <vector>
 
 // void insertion(int* A , int n){
 // 	for (int i = 1; i < n; i++) {
@@ -17,10 +18,12 @@
 int main(){
 
 
-	int** M = new int*[3];
-	for (int i=0; i<3; i++){
-		M[i] = new int[3];
-	}
+	// int** M = new int*[3];
+	// for (int i=0; i<3; i++){
+	// 	M[i] = new int[3];
+	// }
+
+	vector< vector <int> > M(3, vector<int>(5));
 
 	int start = 5;
 
