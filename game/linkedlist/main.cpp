@@ -12,11 +12,11 @@ int main(){
 	list.addFront("how");
 	list.addFront("are");
 	list.addFront("you");
+
 	while(!list.empty()){
 		string elem = list.front();
 		list.removeFront();
 		cout<< elem << endl;
 	}
-
 
 }
