@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 
@@ -17,6 +18,13 @@ int LinearSum(int* A, int n){
 	}
 }
 
+int LinearVectorAdd(vector<int> A, int n, int counter = 0){
+	if(n==1){
+		return A[A.size()-1];
+	}else{
+		return LinearVectorAdd(A,n-1,counter+1) + A[counter];
+	} 
+}
 
 int LinearAdd(int* A, int n, int m, int counter = 0){
 	if(n==1){
@@ -30,14 +38,26 @@ int LinearAdd(int* A, int n, int m, int counter = 0){
 
 
 
+
 int main(){
 
 	// int ab = Factorial(4);
 	// cout << ab << endl;
-	   int a[] = {4,3,6,2,5};
+	int a[] = {4,3,6,2,5};
+	vector<int> b;
+	b.push_back(4);
+	b.push_back(3);
+	b.push_back(6);
+	b.push_back(2);
+	b.push_back(5);
+
 	int s = LinearSum(a,5);
 	cout << s <<endl;
 
 	int j = LinearAdd(a,5,5);
 	cout << j << endl;
+
+	int k = LinearVectorAdd(b,5);
+
+	cout << k << endl;
 }
