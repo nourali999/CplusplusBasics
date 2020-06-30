@@ -18,11 +18,12 @@ int LinearSum(int* A, int n){
 	}
 }
 
-int LinearVectorAdd(vector<int> A, int n, int counter = 0){
-	if(n==1){
+int LinearVectorAdd(vector<int> A, int counter = 0){
+	if(counter== (A.size()-1)){
 		return A[A.size()-1];
 	}else{
-		return LinearVectorAdd(A,n-1,counter+1) + A[counter];
+		counter = counter+1;
+		return LinearVectorAdd(A,counter) + A[counter-1];
 	} 
 }
 
@@ -51,13 +52,13 @@ int main(){
 	b.push_back(2);
 	b.push_back(5);
 
+	// int j = LinearAdd(a,5,5);
+	// cout << j << endl;
+
 	int s = LinearSum(a,5);
 	cout << s <<endl;
 
-	int j = LinearAdd(a,5,5);
-	cout << j << endl;
-
-	int k = LinearVectorAdd(b,5);
+	int k = LinearVectorAdd(b);
 
 	cout << k << endl;
 }
