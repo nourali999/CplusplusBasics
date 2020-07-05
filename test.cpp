@@ -18,7 +18,7 @@ void reverse(int* A, int n){
 	if((n%2)==0){
 		 end = (n/2);
 	}else{
-		j = ((n-1)/2);
+		 end = ((n-1)/2);
 	}
 	for(int i = 0; i < n; i++){
 		if(i==end){
@@ -29,8 +29,6 @@ void reverse(int* A, int n){
 		A[i] = temp;
 		j--;
 	}
-
-
 }
 
 void print(int* A, int n){
