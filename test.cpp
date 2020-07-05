@@ -11,6 +11,27 @@ void deleteIndex(int* A, int& n, int i){
 	n--;
 }
 
+void reverse(int* A, int n){
+	int temp;
+	int j = n-1;
+	int end;
+	if((n%2)==0){
+		 end = (n/2);
+	}else{
+		j = ((n-1)/2);
+	}
+	for(int i = 0; i < n; i++){
+		if(i==end){
+			break;
+		}
+		temp = A[j];
+		A[j] = A[i];
+		A[i] = temp;
+		j--;
+	}
+
+
+}
 
 void print(int* A, int n){
 	for (int i = 0; i < n; i++){
@@ -37,9 +58,7 @@ int main(){
 	A[3] = 11;
 	 
 	print(A,n);
-
 	deleteIndex(A,n,2);
-
 	print(A,n);
 
 	return 0;
