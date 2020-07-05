@@ -56,7 +56,9 @@ int main(){
 	A[3] = 11;
 	 
 	print(A,n);
-	deleteIndex(A,n,2);
+	
+	reverse(A,n);
+
 	print(A,n);
 
 	return 0;
