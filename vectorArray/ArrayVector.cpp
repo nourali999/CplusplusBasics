@@ -1,9 +1,5 @@
 #include "ArrayVector.h"
 
-using namespace std;
-
-
-
 
 ArrayVector::ArrayVector()
 : capacity(0), n(0), A(nullptr) { }

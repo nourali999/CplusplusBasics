@@ -2,17 +2,46 @@
 #include <string>
 
 
+using namespace std;
+
+void deleteIndex(int* A, int& n, int i){
+	for(int j = i; j < (n-1); j++){
+		A[j] = A[j+1];
+	}
+	n--;
+}
+
+
+void print(int* A, int n){
+	for (int i = 0; i < n; i++){
+		cout<< A[i] << " ";
+	}
+	printf("\n");
+}
 
 int main(){
+	// char ch = 'Q';
+	// char* p = &ch; 
+	// std::cout << *p << std::endl;
+    // ch = 'Z';
+    // std::cout << *p << std::endl; 
+    // *p = 'X'; 
+    // std::cout << ch << std::endl;
 
+	int n = 4;
+	int* A = new int(n);
 
-	char ch = 'Q';
-	char* p = &ch; 
-	std::cout << *p << std::endl;
-    ch = 'Z';
-    std::cout << *p << std::endl; 
-    *p = 'X'; 
-    std::cout << ch << std::endl;
+	A[0] = 5;
+	A[1] = 7;
+	A[2] = 9;
+	A[3] = 11;
+	 
+	print(A,n);
+
+	deleteIndex(A,n,2);
+
+	print(A,n);
+
 	return 0;
 	
 }
