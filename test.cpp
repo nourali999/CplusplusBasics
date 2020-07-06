@@ -47,19 +47,20 @@ int main(){
     // *p = 'X'; 
     // std::cout << ch << std::endl;
 
-	int n = 4;
-	int* A = new int(n);
 
-	A[0] = 5;
-	A[1] = 7;
-	A[2] = 9;
-	A[3] = 11;
-	 
-	print(A,n);
-	
-	reverse(A,n);
+	int A [5] = {5 , 2, 77, 40, 12071}; 
 
-	print(A,n);
+	printf("\n");
+
+	print(A,5);
+
+	printf("\n");
+
+	reverse(A,5);
+
+	print(A,5);
+
+	printf("\n");
 
 	return 0;
 	
