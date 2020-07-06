@@ -48,7 +48,7 @@ int main(){
     // std::cout << ch << std::endl;
 
 
-	int A [5] = {5 , 2, 77, 40, 12071}; 
+	int A[] = {5 , 2, 77, 40, 12071}; 
 
 	printf("\n");
 
