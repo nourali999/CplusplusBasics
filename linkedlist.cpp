@@ -2,30 +2,31 @@
 #include <stdlib.h>
 #include <vector>
 #include <iostream>
-struct Node
+class Node
 {
- int data;
- struct Node *next;
-}*first=NULL;
+  public:
+ 	int data;
+ 	class Node *next;
+};
+Node* first = new Node();
 void create(int A[],int n)
 {
  int i;
- struct Node *t,*last;
- first=(struct Node *)malloc(sizeof(struct Node));
- first->data=A[0];
+ class Node *t,*last;
+ first->data=A[0]; 
  first->next=NULL;
  last=first;
 
  for(i=1;i<n;i++)
  {
- t=(struct Node*)malloc(sizeof(struct Node));
+ t=(class Node*)malloc(sizeof(class Node));
  t->data=A[i];
  t->next=NULL;
  last->next=t;
  last=t;
  }
 }
-void Display(struct Node *p)
+void Display(class Node *p)
 {
  while(p!=NULL)
  {
@@ -33,7 +34,7 @@ void Display(struct Node *p)
  p=p->next;
  }
 }
-void RDisplay(struct Node *p)
+void RDisplay(class Node *p)
 {
  if(p!=NULL)
  {
