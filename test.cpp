@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 
 using namespace std;
@@ -48,19 +49,32 @@ int main(){
     // std::cout << ch << std::endl;
 
 
-	int A[] = {5 , 2, 77, 40, 12071}; 
+	// int A[] = {5 , 2, 77, 40, 12071}; 
 
-	printf("\n");
+	// printf("\n");
 
-	print(A,5);
+	// print(A,5);
 
-	printf("\n");
+	// printf("\n");
 
-	reverse(A,5);
+	// reverse(A,5);
 
-	print(A,5);
+	// print(A,5);
 
-	printf("\n");
+	// printf("\n");
+
+	std::vector<int> myvector {2,5};
+	std::vector<int> myvec    (4,5);
+
+	for (int i : myvector){
+		std::cout << i << " ";
+	}
+	std::cout<< std::endl;
+	for (int j : myvec){
+		std::cout << j << " ";
+	}
+
+	std::cout<< std::endl;
 
 	return 0;
 	
